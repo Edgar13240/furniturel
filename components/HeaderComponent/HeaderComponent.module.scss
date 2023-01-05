@@ -1,0 +1,64 @@
+.Header{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px;
+}
+
+.Header__content{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.Header__list{
+  display: flex;
+  padding-left: 20px;
+  .Header__item{
+    list-style: none;
+    padding-left: 10px;
+  }
+}
+
+.Header__right{
+  display: flex;
+  flex-grow: 2;
+  .Header__phone{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .Header__icon{
+      color: #9A1414;
+    }
+  }
+}
+
+.Header__bars {
+  display: none;
+  font-size: 35px;
+}
+
+@media screen and (max-width: 1200px){
+  .Header__bars {
+    display: block;
+  }
+  .Header__content{
+    display: block;
+  }
+  .Header{
+    display: block;
+  }
+  .Header__menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Header__list{
+    display: block;
+    padding: 0px;
+  }
+  .Header__item{
+    padding: 10px 0px;
+  }
+
+
+}

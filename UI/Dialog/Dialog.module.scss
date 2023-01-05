@@ -1,0 +1,51 @@
+@import "styles/utils/functions";
+@import "styles/utils/mixins";
+
+.Dialog {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  outline: 0;
+  z-index: 99999;
+  &__content {
+    background: var(--white);
+  }
+  &__header {
+    padding: 1rem;
+    background: var(--white);
+    border-bottom: 1px var(--main-alpha) solid;
+    z-index: 10;
+  }
+  &__close {
+    width: 45px;
+    div {
+      transform: rotate(45deg);
+    }
+  }
+  &__body {
+    padding: 1rem;
+  }
+  &__footer {
+    margin-top: 1rem;
+    margin-left: auto;
+    gap: 15px;
+    width: 30%;
+  }
+}
+
+.half {
+  overflow-y: auto;
+  border-radius: 1.5rem 0 0 1.5rem;
+  max-width: PixelToRem(850);
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  height: 90vh;
+  transform: translate(-50%, -50%);
+}
+
+.fullscreen {
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+}

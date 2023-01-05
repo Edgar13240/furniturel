@@ -1,0 +1,18 @@
+.Star {
+  font-size: 32px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: default;
+
+  &[aria-checked="true"] {
+    cursor: pointer;
+  }
+}
+
+.Star__active {
+  color: var(--yellow);
+}
+.Star__inActive {
+  color: var(--secondary);
+}

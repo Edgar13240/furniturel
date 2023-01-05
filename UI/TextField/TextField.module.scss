@@ -1,0 +1,26 @@
+@import "styles/utils/functions";
+@import "styles/utils/mixins";
+
+.TextField__input {
+  height: PixelToRem(49);
+  padding: 10px 15px;
+  border: 1px var(--grey) solid;
+  font-size: 16px;
+  outline: 0;
+  @include AllTransitionStylesMixin;
+  &:focus {
+    border-color: var(--secondary);
+  }
+}
+
+.TextField__label {
+  margin-bottom: PixelToRem(5);
+}
+
+.black {
+  color: var(--black);
+}
+
+.white {
+  color: var(--white);
+}

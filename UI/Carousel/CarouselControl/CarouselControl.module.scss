@@ -1,0 +1,20 @@
+.CarouselControl {
+  .CarouselControl__button {
+    top: 50%;
+    position: absolute;
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    background: var(--white);
+    box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
+  }
+  .CarouselControl__prev {
+    left: 15px;
+  }
+  .CarouselControl__next {
+    right: 15px;
+  }
+  .CarouselControl__nextIcon {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,53 @@
+@import "styles/utils/functions";
+@import "styles/utils/mixins";
+
+.Button {
+  @include AllTransitionStylesMixin;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding-left: PixelToRem(20);
+  padding-right: PixelToRem(20);
+  font-size: PixelToRem(16);
+  &:active {
+    border-radius: 15px;
+  }
+}
+
+.small {
+  padding-top: PixelToRem(8);
+  padding-bottom: PixelToRem(8);
+}
+
+.large {
+  padding-top: PixelToRem(14);
+  padding-bottom: PixelToRem(14);
+}
+
+.main[name="contained"] {
+  background: var(--main);
+  color: var(--white);
+  border-color: var(--main);
+  &:hover {
+    background: var(--main-dark);
+  }
+}
+
+.main[name="outlined"] {
+  background: transparent;
+  color: var(--main);
+  border-color: var(--main);
+  &:hover {
+    background: var(--main-alpha);
+    color: var(--main-dark);
+    border-color: var(--main-dark);
+  }
+}
+
+.white[name="contained"] {
+  background: var(--rose-white);
+  color: var(--main);
+  &:hover {
+    background: var(--main-alpha);
+    color: var(--main-dark);
+  }
+}

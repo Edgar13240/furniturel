@@ -1,0 +1,34 @@
+@import "styles/utils/functions";
+@import "styles/utils/mixins";
+
+.Card {
+  background: var(--white);
+  cursor: pointer;
+  @include AllTransitionStylesMixin;
+  max-width: PixelToRem(440);
+  width: 100%;
+  border-radius: 0 0 PixelToRem(20) PixelToRem(20);
+  .Card__image img {
+    object-fit: cover;
+    width: 100%;
+    max-width: PixelToRem(440);
+    max-height: PixelToRem(270);
+  }
+  .Card__body {
+    padding: PixelToRem(15) PixelToRem(20);
+    .Card__title {
+      font-size: var(--fs-18);
+    }
+    .Card__date {
+      font-size: var(--fs-14);
+      color: var(--grey);
+      margin-top: PixelToRem(15);
+    }
+  }
+  &:hover {
+    box-shadow: 6px 7px 5px rgba(97, 97, 97, 0.1);
+  }
+  &:hover .Card__title {
+    text-decoration: underline;
+  }
+}

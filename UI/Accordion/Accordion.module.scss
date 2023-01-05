@@ -1,0 +1,30 @@
+@import "styles/utils/functions";
+@import "styles/utils/mixins";
+
+.Accordion {
+  border-top: 1px var(--grey) solid;
+  border-bottom: 1px var(--grey) solid;
+  .Accordion__header {
+    cursor: pointer;
+    padding-top: PixelToRem(24);
+    padding-bottom: PixelToRem(24);
+  }
+  .Accordion__body {
+    color: var(--secondary);
+    padding-bottom: PixelToRem(24);
+  }
+  .Accordion__title {
+    color: var(--secondary);
+    font-size: var(--fs-18);
+  }
+}
+
+.Accordion[aria-checked="true"] {
+  border-color: var(--main-alpha);
+  .Accordion__cross {
+    transform: rotate(225deg);
+  }
+  .Accordion__title {
+    color: var(--black);
+  }
+}

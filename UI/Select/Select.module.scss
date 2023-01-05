@@ -1,0 +1,36 @@
+@import "styles/utils/functions";
+@import "styles/utils/mixins";
+
+.Select {
+  &__field {
+    cursor: pointer;
+    background: var(--white);
+    padding: 0.625rem 0.75rem;
+    border: 1px var(--grey) solid;
+  }
+  &__label {
+    margin-bottom: PixelToRem(6);
+  }
+  &__error {
+    border-color: var(--main) !important;
+  }
+  &__list {
+    z-index: 15;
+    background: var(--white);
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+  .Select__labelList {
+    top: 67px!important;
+  }
+  .OptionItem {
+    padding: 0.625rem 0.75rem;
+    text-align: left;
+    &:hover {
+      background: var(--main-alpha);
+    }
+  }
+}
